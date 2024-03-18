@@ -1,0 +1,43 @@
+/* FoodList.css */
+.slider-container {
+  display: flex;
+  overflow-x: hidden;
+  scroll-snap-type: x mandatory;
+}
+
+.slide {
+  flex: 0 0 auto;
+  width: 100%; /* Adjust based on your design */
+  scroll-snap-align: start;
+  transition: transform 0.3s ease-in-out;
+  opacity: 0.5; /* Non-active slides are less visible */
+}
+
+.slide.active {
+  opacity: 1; /* Active slide is fully visible */
+}
+
+.action-button {
+  background: #eee;
+  border: none;
+  padding: 8px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.slider-container::-webkit-scrollbar {
+  height: 2px; /* Height of the scrollbar */
+  background-color: #f5f5f5; /* Color of the scrollbar track */
+}
+
+.slider-container::-webkit-scrollbar-thumb {
+  background-color: #d4d2d2; /* Color of the scrollbar thumb */
+  border-radius: 4px; /* Rounded corners of the scrollbar thumb */
+}
+
+.slider-container::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Color of the scrollbar thumb on hover */
+}
+.images {
+  height: 100% !important;
+  border-radius: 16px !important;
+}

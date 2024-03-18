@@ -1,75 +1,69 @@
-import 'keen-slider/keen-slider.min.css';
+import React, { useState, useEffect, useRef } from 'react';
 import FoodItem from './FoodItem';
-import { useKeenSlider } from 'keen-slider/react';
+import '../assets/food.css';
 import {
   ArrowLongLeftIcon,
   ArrowLongRightIcon,
 } from '@heroicons/react/24/outline';
-import { useState } from 'react';
 
 const FoodList = ({ foods }) => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [sliderRef, instanceRef] = useKeenSlider({
-    mode: 'free-snap',
-    renderMode: 'performance',
-    slideChanged(slider) {
-      setCurrentSlide(slider.track.details.rel);
-    },
-    initial: 0,
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [visibleSlides, setVisibleSlides] = useState(8); // Default to large screens
 
-    breakpoints: {
-      '(max-width: 480px)': {
-        slides: { perView: 4, spacing: 10 },
-      },
-      '(min-width: 480px)': {
-        slides: { perView: 6, spacing: 10 },
-      },
-      '(min-width: 768px)': {
-        slides: { perView: 8, spacing: 10 },
-      },
-    },
-  });
+  useEffect(() => {
+    const updateVisibleSlides = () => {
+      const width = window.innerWidth;
+      if (width < 640) {
+        setVisibleSlides(3); // Small screens
+      } else if (width >= 640 && width < 1024) {
+        setVisibleSlides(6); // Medium screens
+      } else {
+        setVisibleSlides(8); // Large screens
+      }
+    };
 
-  if (!foods) {
-    return null;
-  }
+    window.addEventListener('resize', updateVisibleSlides);
+    updateVisibleSlides(); // Initialize on component mount
+
+    return () => window.removeEventListener('resize', updateVisibleSlides);
+  }, []);
+
+  const goToNext = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % foods.length);
+  };
+
+  const goToPrevious = () => {
+    setCurrentIndex(
+      (prevIndex) => (prevIndex - 1 + foods.length) % foods.length
+    );
+  };
 
   return (
     <div className='container-max my-6 mt-8'>
       <div className='flex items-center justify-between'>
         <h1 className='mb-4 font-bold text-2xl text-zinc-700'>
-          {foods?.card?.card?.header?.title}
+          Discover Our Foods
         </h1>
-
-        {instanceRef.current && (
-          <div className='flex gap-2 items-center'>
-            <button
-              disabled={currentSlide === 0}
-              onClick={() => instanceRef.current?.prev()}
-              className='bg-gray-100 p-2 rounded-full disabled:text-gray-300'
-            >
-              <ArrowLongLeftIcon className='w-4 h-4' />{' '}
-            </button>
-            <button
-              disabled={
-                currentSlide ===
-                instanceRef?.current?.track?.details?.slides?.length - 1
-              }
-              onClick={() => instanceRef.current?.next()}
-              className='bg-gray-100 p-2 rounded-full disabled:text-gray-300'
-            >
-              <ArrowLongRightIcon className='w-4 h-4' />{' '}
-            </button>
-          </div>
-        )}
+        {/* <div className='flex gap-2 items-center'>
+          <button onClick={goToPrevious} className='action-button'>
+            <ArrowLongLeftIcon className='w-4 h-4' />
+          </button>
+          <button onClick={goToNext} className='action-button'>
+            <ArrowLongRightIcon className='w-4 h-4' />
+          </button>
+        </div> */}
       </div>
-
-      <div ref={sliderRef} className='keen-slider'>
-        {foods?.card?.card?.gridElements?.infoWithStyle?.info?.map((food) => (
-          <FoodItem food={food} key={food.id} />
+      <div
+        className='slider-container'
+        style={{ display: 'flex', overflowX: 'auto' }}>
+        {foods?.card?.card?.imageGridCards?.info.map((food, index) => (
+          <div key={food.id} style={{ flex: `0 0 ${100 / visibleSlides}%` }}>
+            <FoodItem food={food} />
+          </div>
         ))}
       </div>
     </div>
   );
 };
+
 export default FoodList;

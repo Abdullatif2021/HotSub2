@@ -5,6 +5,8 @@ import { GET_RESTAURANTS_URL } from '../utils/constants';
 import BannerList from './BannerList';
 import FoodList from './FoodList';
 import RestaurantList from './RestaurantList';
+import Banner from './Banner';
+import HeroSection from './HeroSection';
 
 const Body = () => {
   const { banners, foods, restaurants, isLoading } = useRestaurants();
@@ -26,20 +28,43 @@ const Body = () => {
   useEffect(() => {
     setFilteredRestaurants(restaurants);
   }, [isLoading]);
-
+  const test = [
+    {
+      id: 1,
+    },
+    {
+      id: 2,
+    },
+    {
+      id: 3,
+    },
+    {
+      id: 4,
+    },
+    {
+      id: 5,
+    },
+    {
+      id: 6,
+    },
+    {
+      id: 7,
+    },
+    {
+      id: 8,
+    },
+  ];
   return (
     <div className='bg-white relative py-8'>
       {/* banners */}
-      <BannerList banners={banners} isLoading={isLoading} />
+      <BannerList />
 
       {/* food list */}
       <FoodList foods={foods} isLoading={isLoading} />
-
       {/* search bar */}
       <form
         onSubmit={handleSearch}
-        className='flex gap-2 md:gap-4 max-w-[560px] w-[90%] mx-auto mt-6'
-      >
+        className='flex gap-2 md:gap-4 max-w-[560px] w-[90%] mx-auto mt-6'>
         <input
           type='search'
           name='search'
@@ -50,8 +75,7 @@ const Body = () => {
         />
         <button
           type='submit'
-          className='bg-orange-400 basis-2/12 text-center text-white p-2 flex justify-center gap-2 items-center md:px-8 rounded-md text-sm md:text-base'
-        >
+          className='bg-orange-400 basis-2/12 text-center text-white p-2 flex justify-center gap-2 items-center md:px-8 rounded-md text-sm md:text-base'>
           <MagnifyingGlassIcon className='w-4 h-4' />{' '}
           <span className='hidden md:block'>Search</span>
         </button>
@@ -60,6 +84,7 @@ const Body = () => {
       {/* restaurant list */}
 
       <RestaurantList isLoading={isLoading} restaurants={filteredRestaurants} />
+      <HeroSection />
     </div>
   );
 };

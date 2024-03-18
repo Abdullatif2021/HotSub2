@@ -15,7 +15,7 @@ const Contact = () => {
   return (
     <div className='container-max min-h-screen'>
       <h1 className='text-2xl my-4 font-bold'>Contact</h1>
-      <div>
+      {/* <div>
         <h2 className='text-xl font-semibold'>Hi 👋, I'm {details.name} 👩‍💻</h2>
         <p className='text-lg'>{details.bio}</p>
 
@@ -59,7 +59,7 @@ const Contact = () => {
             </a>
           </p>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

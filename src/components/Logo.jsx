@@ -1,13 +1,13 @@
 import { Link } from 'react-router-dom';
-
+import logoImage from '../assets/images/hot-logo.png';
 const Logo = () => {
   return (
     <Link
       to='/'
       data-testid='logo'
-      className='text-xl md:text-2xl font-semibold flex items-center'
-    >
-      🍔 <span className='hidden md:block logo'>FoodHunt</span>
+      className='text-xl md:text-2xl font-semibold flex items-center'>
+      <img src={logoImage} alt='logo' />
+      {/* 🍔 <span className='hidden md:block logo'>FoodHunt</span> */}
     </Link>
   );
 };

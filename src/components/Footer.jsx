@@ -1,13 +1,12 @@
 const Footer = () => {
   return (
     <div className='container-max text-center py-4 border-t'>
-      Foody, made by{' '}
+      HotSub, made by{' '}
       <a
-        href='https://dineshrout.netlify.app'
+        href='https://inkwell.graphics/'
         target={'_blank'}
-        className='text-orange-500'
-      >
-        Dinesh Rout
+        className='text-orange-500'>
+        InkWell
       </a>
     </div>
   );
