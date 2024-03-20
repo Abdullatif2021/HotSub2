@@ -8,7 +8,8 @@ import RestaurantList from './RestaurantList';
 import Banner from './Banner';
 import HeroSection from './HeroSection';
 import icon from '../assets/images/icon.png';
-import Image from '../assets/images/77.png';
+import icon1 from '../assets/images/77.png';
+import call from '../assets/images/call.png';
 
 const Body = () => {
   const { banners, foods, restaurants, isLoading } = useRestaurants();
@@ -56,7 +57,15 @@ const Body = () => {
       id: 8,
     },
   ];
-  const [isHovered, setIsHovered] = useState(true);
+  const latitude = 45.426714694644396;
+  const longitude = -75.71570931534453;
+  const [isHovered, setIsHovered] = useState(false);
+  const handleCall = () => {
+    // Ensure the phoneNumber is in the correct format and URL encoded if necessary
+    const formattedNumber = encodeURIComponent('+1 819-777-7171');
+    // Use window.location to navigate
+    window.location.href = `tel:${formattedNumber}`;
+  };
   return (
     <div className='bg-white relative py-8 background'>
       {/* banners */}
@@ -88,21 +97,29 @@ const Body = () => {
 
       <RestaurantList isLoading={isLoading} restaurants={filteredRestaurants} />
       <HeroSection />
-      <div className='fixed bottom-12 right-12 flex flex-col items-center'>
+      <div className='fixed bottom-12 right-12 flex flex-col items-center z-50'>
         {/* Conditional rendering for the menu based on hover state */}
         {isHovered && (
-          <div className='flex flex-col items-center gap-2 list bg-[#25D366]'>
-            <img width={55} src={icon} alt='location' />
-            <img width={55} src={icon} alt='call' />
-          </div>
+          <a
+            href={`https://www.google.com/maps/search/?api=1&query=${latitude},${longitude}`}
+            target='_blank'>
+            <button
+              onClick={() => setIsHovered(!isHovered)}
+              className=' bottom-12 mb-1 right-12 bg-[#df5f61] p-3 text-white rounded-full shadow-lg flex items-center justify-center hover:bg-[#128C7E] transition-colors duration-300'>
+              <img width={55} src={icon} alt='helper' />
+            </button>
+          </a>
         )}
 
         {/* WhatsApp button */}
         <button
-          onMouseEnter={() => setIsHovered(true)}
-          onMouseLeave={() => setIsHovered(false)}
-          className=' bottom-12 right-12 bg-[#25D366] p-3 text-white rounded-full shadow-lg flex items-center justify-center hover:bg-[#128C7E] transition-colors duration-300'>
-          <img width={55} src={Image} alt='helper' />
+          onClick={() => setIsHovered(!isHovered)}
+          className=' bottom-12 right-12 bg-[#df5f61] p-3 text-white rounded-full shadow-lg flex items-center justify-center hover:bg-[#128C7E] transition-colors duration-300'>
+          {isHovered ? (
+            <img width={48} onClick={handleCall} src={call} alt='helper' />
+          ) : (
+            <img width={55} src={icon1} alt='helper' />
+          )}
         </button>
       </div>
     </div>

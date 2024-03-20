@@ -65,7 +65,7 @@ const BannerList = () => {
           Best offers for you
         </h1>
 
-        {instanceRef.current && (
+        {/* {instanceRef.current && (
           <div className='flex gap-2 items-center'>
             <button
               disabled={currentSlide === 0}
@@ -83,7 +83,7 @@ const BannerList = () => {
               <ArrowLongRightIcon className='w-4 h-4' />{' '}
             </button>
           </div>
-        )}
+        )} */}
       </div>
 
       {timerDone ? (
