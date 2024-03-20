@@ -7,6 +7,8 @@ import FoodList from './FoodList';
 import RestaurantList from './RestaurantList';
 import Banner from './Banner';
 import HeroSection from './HeroSection';
+import icon from '../assets/images/icon.png';
+import Image from '../assets/images/77.png';
 
 const Body = () => {
   const { banners, foods, restaurants, isLoading } = useRestaurants();
@@ -54,6 +56,7 @@ const Body = () => {
       id: 8,
     },
   ];
+  const [isHovered, setIsHovered] = useState(true);
   return (
     <div className='bg-white relative py-8 background'>
       {/* banners */}
@@ -85,6 +88,23 @@ const Body = () => {
 
       <RestaurantList isLoading={isLoading} restaurants={filteredRestaurants} />
       <HeroSection />
+      <div className='fixed bottom-12 right-12 flex flex-col items-center'>
+        {/* Conditional rendering for the menu based on hover state */}
+        {isHovered && (
+          <div className='flex flex-col items-center gap-2 list bg-[#25D366]'>
+            <img width={55} src={icon} alt='location' />
+            <img width={55} src={icon} alt='call' />
+          </div>
+        )}
+
+        {/* WhatsApp button */}
+        <button
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+          className=' bottom-12 right-12 bg-[#25D366] p-3 text-white rounded-full shadow-lg flex items-center justify-center hover:bg-[#128C7E] transition-colors duration-300'>
+          <img width={55} src={Image} alt='helper' />
+        </button>
+      </div>
     </div>
   );
 };
