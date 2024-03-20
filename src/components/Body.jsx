@@ -55,7 +55,7 @@ const Body = () => {
     },
   ];
   return (
-    <div className='bg-white relative py-8'>
+    <div className='bg-white relative py-8 background'>
       {/* banners */}
       <BannerList />
 

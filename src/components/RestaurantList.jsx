@@ -18,7 +18,7 @@ const RestaurantList = ({ isLoading, restaurants }) => {
           restaurants.map((restaurant, i) => (
             <Link
               to={`/restaurants/${restaurant.info.id}`}
-              className='hover:scale-95 transition ease-in-out duration-300 relative z-10'
+              className='hover:scale-95 transition ease-in-out duration-300 relative z-10 item-background'
               key={i}>
               {restaurant.info.avgRating >= 4.2 ? (
                 <RestaurantCardTopRated restaurant={restaurant} />

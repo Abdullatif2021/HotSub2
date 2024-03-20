@@ -39,7 +39,7 @@ const BannerList = () => {
       setTimeout(
         setInterval(() => {
           slider.next();
-        }, 2000)
+        }, 200000)
       ); // Change 2000 to whatever interval you want in milliseconds
     },
     duration: 3000, // Duration of the slide transition in milliseconds. Increase for slower transitions.
