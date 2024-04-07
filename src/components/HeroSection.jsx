@@ -46,7 +46,7 @@ const HeroSection = () => {
           href={`https://www.google.com/maps/search/?api=1&query=${latitude},${longitude}`}
           target='_blank'
           rel='noopener noreferrer'
-          className='btn w-full md:w-3/5 lg:w-2/5'>
+          className='btn w-full md:w-3/5 lg:w-3/5'>
           <img width='40' height='40' src={icon} alt='location' />{' '}
           {selectedLang === 'EN' ? 'explore now' : 'explorer maintenant'}
         </a>

@@ -15,10 +15,11 @@ const RestaurantList = ({ isLoading, restaurants }) => {
   const [is_loading, setIs_loading] = useState(true);
 
   useEffect(() => {
+    setIs_loading(true);
     setTimeout(() => {
       setIs_loading(false);
-    }, 2000);
-  }, []);
+    }, 1000);
+  }, [selectedLang]);
   useEffect(() => {
     setLanguage(lang);
   }, [lang]);

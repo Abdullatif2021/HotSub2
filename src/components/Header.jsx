@@ -84,14 +84,14 @@ const Header = () => {
               <p className='hidden md:block'>Home</p>
             </Link>
           </li>
-          <li>
+          {/* <li>
             <Link
               to='/about'
               className='p-2 md:px-4 hover:bg-gray-50 rounded-md flex items-center gap-2'>
               <BuildingOfficeIcon className='w-4 h-4 text-gray-700' />{' '}
               <p className='hidden md:block'>About</p>
             </Link>
-          </li>
+          </li> */}
           <li>
             <a
               href={`https://www.google.com/maps/search/?api=1&query=${latitude},${longitude}`}

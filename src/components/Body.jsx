@@ -93,7 +93,7 @@ const Body = () => {
             <button
               onClick={() => setIsHovered(!isHovered)}
               className=' bottom-12 mb-1 right-12 bg-[#df5f61] p-3 text-white rounded-full shadow-lg flex items-center justify-center hover:bg-[#df5f61] transition-colors duration-300'>
-              <img width={55} src={icon} alt='helper' />
+              <img width={48} src={icon} alt='helper' />
             </button>
           </a>
         )}
@@ -101,11 +101,11 @@ const Body = () => {
         {/* WhatsApp button */}
         <button
           onClick={() => setIsHovered(!isHovered)}
-          className=' bottom-12 right-12 bg-[#df5f61] p-3 text-white rounded-full shadow-lg flex items-center justify-center hover:bg-[#df5f61] transition-colors duration-300'>
+          className=' bottom-12 right-12 bg-[#df5f61] p-4 text-white rounded-full shadow-lg flex items-center justify-center hover:bg-[#df5f61] transition-colors duration-300'>
           {isHovered ? (
-            <img width={48} onClick={handleCall} src={call} alt='helper' />
+            <img width={35} onClick={handleCall} src={call} alt='helper' />
           ) : (
-            <img width={55} src={icon1} alt='helper' />
+            <img width={48} src={icon1} alt='helper' />
           )}
         </button>
       </div>
