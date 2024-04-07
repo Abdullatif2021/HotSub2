@@ -10,7 +10,9 @@ import HeroSection from './HeroSection';
 import icon from '../assets/images/icon.png';
 import icon1 from '../assets/images/77.png';
 import call from '../assets/images/call.png';
-
+import { selectdLang } from '../features/app/appSlice';
+import { useSelector, useDispatch } from 'react-redux';
+import { meals } from '../store/meals';
 const Body = () => {
   const { banners, foods, restaurants, isLoading } = useRestaurants();
   const [filteredRestaurants, setFilteredRestaurants] = useState([]);
@@ -27,36 +29,19 @@ const Body = () => {
       )
     );
   };
+  const lang = useSelector(selectdLang);
+  useEffect(() => {
+    console.log({ lang });
+  }, [lang]);
+  const [selectedLang, setLanguage] = useState('EN');
 
+  useEffect(() => {
+    setLanguage(lang);
+  }, [lang]);
   useEffect(() => {
     setFilteredRestaurants(restaurants);
   }, [isLoading]);
-  const test = [
-    {
-      id: 1,
-    },
-    {
-      id: 2,
-    },
-    {
-      id: 3,
-    },
-    {
-      id: 4,
-    },
-    {
-      id: 5,
-    },
-    {
-      id: 6,
-    },
-    {
-      id: 7,
-    },
-    {
-      id: 8,
-    },
-  ];
+
   const latitude = 45.426714694644396;
   const longitude = -75.71570931534453;
   const [isHovered, setIsHovered] = useState(false);
@@ -81,7 +66,9 @@ const Body = () => {
           type='search'
           name='search'
           id='search'
-          placeholder='Search for Chicken Biriyani'
+          placeholder={
+            selectedLang === 'EN' ? 'Search for Meals' : 'Rechercher des repas'
+          }
           className='p-2 px-4 rounded-md border outline-none focus-within:border-orange-400 border-gray-200 grow w-full'
           ref={serachRef}
         />
@@ -95,7 +82,7 @@ const Body = () => {
 
       {/* restaurant list */}
 
-      <RestaurantList isLoading={isLoading} restaurants={filteredRestaurants} />
+      <RestaurantList isLoading={isLoading} restaurants={meals} />
       <HeroSection />
       <div className='fixed bottom-12 right-12 flex flex-col items-center z-50'>
         {/* Conditional rendering for the menu based on hover state */}

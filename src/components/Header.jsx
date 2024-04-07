@@ -16,20 +16,39 @@ import { selectItemsInCart } from '../features/cart/cartSlice';
 import {
   closeLocationModal,
   openLocationModal,
+  setLang,
   toggleMenu,
 } from '../features/app/appSlice';
 import LocationModal from './LocationModal';
-import { selectAddress } from '../features/address/addressSlice';
+import Lang from './lang.jsx';
+import en from '../assets/images/en.png';
+import fr from '../assets/images/fr.png';
 
+import { useEffect, useState } from 'react';
+import { selectAddress } from '../features/address/addressSlice';
+import { selectdLang } from '../features/app/appSlice';
 const Header = () => {
   const { isMenuOpen, isLocationModalOpen } = useSelector((state) => state.app);
   const dispatch = useDispatch();
   const { loginWithRedirect, isAuthenticated, isLoading } = useAuth0();
   const items = useSelector(selectItemsInCart);
   const { address } = useSelector(selectAddress);
-
+  const [selectedLang, setLanguage] = useState('EN');
   const handleToggleMenu = () => dispatch(toggleMenu());
+  const lang = useSelector(selectdLang);
+  const handleLang = () => {
+    const newLang = selectedLang === 'EN' ? 'FN' : 'EN';
 
+    // Update the local state
+    setLanguage(newLang);
+
+    // Dispatch the new language to the Redux store
+    dispatch(setLang(newLang));
+  };
+
+  useEffect(() => {
+    console.log({ lang });
+  }, [lang]);
   const handleCloseModal = () => dispatch(closeLocationModal());
   const handleOpenModal = () => dispatch(openLocationModal());
   const latitude = 45.426714694644396;
@@ -40,26 +59,22 @@ const Header = () => {
         <div className='flex items-center gap-2 md:gap-4'>
           <Logo />
 
-          {/* <button
-            onClick={handleOpenModal}
-            className='text-xs md:text-sm flex items-center gap-1'>
-            <MapPinIcon className='w-4 h-4 text-gray-700' />
-            {address?.city}
-            <ChevronDownIcon className='w-4 h-4 text-orange-500' />
-          </button> */}
+          <button
+            onClick={handleLang}
+            className='text-xs md:text-sm flex items-center gap-1 rounded-lg w-11'>
+            <img
+              className='rounded-lg'
+              src={selectedLang === 'FN' ? fr : en}
+              alt='flag'
+            />
+          </button>
         </div>
 
         {isLocationModalOpen ? <LocationModal /> : null}
 
         <ul className='text-zinc-700 ml-auto gap-2 md:gap-4 items-center hidden md:flex'>
           {/* <li>
-            <Link
-              to='/search'
-              className='p-2 md:px-4 hover:bg-gray-50 rounded-md flex items-center gap-2'
-            >
-              <MagnifyingGlassIcon className='w-4 h-4 text-gray-700' />{' '}
-              <p className='hidden md:block'>Search</p>
-            </Link>
+            <Lang su />
           </li> */}
           <li>
             <Link

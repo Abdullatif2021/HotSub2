@@ -2,6 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
   isMenuOpen: false,
+  lang: 'EN',
   isLocationModalOpen: false,
 };
 
@@ -14,6 +15,9 @@ const appSlice = createSlice({
     },
     closeMenu(state) {
       state.isMenuOpen = false;
+    },
+    setLang(state, action) {
+      state.lang = action.payload;
     },
     openMenu(state) {
       state.isMenuOpen = true;
@@ -32,7 +36,8 @@ export const {
   closeMenu,
   openMenu,
   closeLocationModal,
+  setLang,
   openLocationModal,
 } = appSlice.actions;
-
+export const selectdLang = (state) => state.app.lang;
 export default appSlice.reducer;

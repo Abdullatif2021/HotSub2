@@ -8,11 +8,18 @@ import {
   ArrowLongRightIcon,
 } from '@heroicons/react/24/outline';
 import { useState, useEffect } from 'react';
+import { selectdLang } from '../features/app/appSlice';
+import { useSelector, useDispatch } from 'react-redux';
 
 const BannerList = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [timerDone, setTimerDone] = useState(true);
+  const [selectedLang, setLanguage] = useState('EN');
+  const lang = useSelector(selectdLang);
 
+  useEffect(() => {
+    setLanguage(lang);
+  }, [lang]);
   useEffect(() => {
     setTimeout(() => {
       setTimerDone(false);
@@ -62,7 +69,9 @@ const BannerList = () => {
     <div className='container-max '>
       <div className='flex justify-between items-center mb-4'>
         <h1 className='font-bold text-2xl text-zinc-700'>
-          Best offers for you
+          {selectedLang === 'EN'
+            ? 'Best offers for you'
+            : 'Meilleures offres pour vous'}
         </h1>
 
         {/* {instanceRef.current && (

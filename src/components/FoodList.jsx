@@ -5,11 +5,17 @@ import {
   ArrowLongLeftIcon,
   ArrowLongRightIcon,
 } from '@heroicons/react/24/outline';
-
+import { selectdLang } from '../features/app/appSlice';
+import { useSelector, useDispatch } from 'react-redux';
 const FoodList = ({ foods }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [visibleSlides, setVisibleSlides] = useState(8); // Default to large screens
+  const [selectedLang, setLanguage] = useState('EN');
+  const lang = useSelector(selectdLang);
 
+  useEffect(() => {
+    setLanguage(lang);
+  }, [lang]);
   useEffect(() => {
     const updateVisibleSlides = () => {
       const width = window.innerWidth;
@@ -42,7 +48,7 @@ const FoodList = ({ foods }) => {
     <div className='container-max my-6 mt-8'>
       <div className='flex items-center justify-between'>
         <h1 className='mb-4 font-bold text-2xl text-zinc-700'>
-          Discover Our Foods
+          {selectedLang === 'EN' ? 'Discover Our Foods' : 'Découvrez nos plats'}
         </h1>
         {/* <div className='flex gap-2 items-center'>
           <button onClick={goToPrevious} className='action-button'>
