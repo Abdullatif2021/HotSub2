@@ -136,14 +136,14 @@ const Header = () => {
           <div className='shadow-lg transition-all fixed top-full -right-[100%] bg-white h-screen p-4 px-8'>
             <>
               <ul className='text-zinc-700 space-y-4'>
-                <li>
+                {/* <li>
                   <Link
                     to='/search'
                     className='p-2 md:px-4 hover:bg-gray-50 rounded-md flex items-center gap-2'>
                     <MagnifyingGlassIcon className='w-4 h-4 text-gray-700' />{' '}
                     <p>Search</p>
                   </Link>
-                </li>
+                </li> */}
                 <li>
                   <Link
                     to='/'
@@ -152,21 +152,31 @@ const Header = () => {
                   </Link>
                 </li>
                 <li>
+                  <a
+                    href={`https://www.google.com/maps/search/?api=1&query=${latitude},${longitude}`}
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    className='p-2 md:px-4 hover:bg-gray-50 rounded-md flex items-center gap-2'>
+                    <MapPinIcon className='w-4 h-4 text-gray-700' />
+                    <p className='hidden md:block'>Location</p>
+                  </a>
+                </li>
+                {/* <li>
                   <Link
                     to='/about'
                     className='p-2 md:px-4 hover:bg-gray-50 rounded-md flex items-center gap-2'>
                     <BuildingOfficeIcon className='w-4 h-4 text-gray-700' />{' '}
                     <p>About</p>
                   </Link>
-                </li>
-                <li>
+                </li> */}
+                {/* <li>
                   <Link
                     to='/contact'
                     className='p-2 md:px-4 hover:bg-gray-50 rounded-md flex items-center gap-2'>
                     <PhoneIcon className='w-4 h-4 text-gray-700' />{' '}
                     <p>Contact</p>
                   </Link>
-                </li>
+                </li> */}
                 {/* <li>
                   <Link
                     to='/cart'
