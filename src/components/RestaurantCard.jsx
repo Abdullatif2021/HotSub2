@@ -18,7 +18,7 @@ const RestaurantCard = ({ restaurant }) => {
         <img
           src={restaurant.image}
           alt='restaurant'
-          className='relative w-full min-h-[180px] overflow-hidden aspect-video object-cover block rounded-md'
+          className='relative w-full min-h-[122px] overflow-hidden aspect-video object-cover block rounded-md'
         />
         <div className='overlay w-full rounded-md p-2 px-3 '>
           <p className='text-xl font-bold flex gap-2 flex-wrap'>
