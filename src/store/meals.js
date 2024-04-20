@@ -18,7 +18,6 @@ import meal21 from '../assets/meals/meal (21).jpg';
 import meal22 from '../assets/meals/meal (22).jpg';
 import meal25 from '../assets/meals/meal (25).jpg';
 import meal27 from '../assets/meals/meal (27).jpg';
-import meal28 from '../assets/meals/meal (28).jpg';
 import meal30 from '../assets/meals/meal (30).jpg';
 import meal31 from '../assets/meals/meal (31).jpg';
 import meal32 from '../assets/meals/meal (32).jpg';
@@ -356,7 +355,7 @@ export const meals = [
   },
   {
     id: 2,
-    image: meal28,
+    image: meal25,
     en_name: 'Milkshakes',
     fr_name: 'Lait Frappé',
     en_ingredients: [' With whipped cream'],

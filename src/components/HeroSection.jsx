@@ -5,13 +5,29 @@ import { useEffect, useState } from 'react';
 import { selectdLang } from '../features/app/appSlice';
 import { useSelector, useDispatch } from 'react-redux';
 import { LocationMarkerIcon } from '@heroicons/react/solid';
+
+import slider1 from '../assets/slider/slider (1).jpg';
+import slider2 from '../assets/slider/slider (2).jpg';
+import slider3 from '../assets/slider/slider (3).jpg';
+import slider4 from '../assets/slider/slider (4).jpg';
+import slider5 from '../assets/slider/slider (5).jpg';
+import slider6 from '../assets/slider/slider (6).jpg';
+import slider7 from '../assets/slider/slider (7).jpg';
+import slider9 from '../assets/slider/slider (9).jpg';
+import slider10 from '../assets/slider/slider (14).jpg';
+
 const HeroSection = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const images = [
-    'https://lh5.googleusercontent.com/p/AF1QipMqQPb0ZQclq3rr8kEcsVhzEI6TrhawSDqOQqBD=w750-h1235-p-k-no',
-    'https://lh5.googleusercontent.com/p/AF1QipOMYViMeCf0TilA4OE1WUTsPtAZNsOAPb0auHal=w750-h1235-p-k-no',
-    'https://lh5.googleusercontent.com/p/AF1QipNpNqWEoeifoiFl61Iw_J0B07hl3ACaNkk-VTVZ=w750-h813-p-k-no',
-    'https://lh5.googleusercontent.com/p/AF1QipPPDG1mvb5CjRWq8HgVAoHbvGBftJLbY_ioPZUi=w750-h813-p-k-no',
+    slider1,
+    slider2,
+    slider3,
+    slider4,
+    slider5,
+    slider6,
+    slider7,
+    slider9,
+    slider10,
   ];
   const lang = useSelector(selectdLang);
   useEffect(() => {
