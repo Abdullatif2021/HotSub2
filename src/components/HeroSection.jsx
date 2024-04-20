@@ -13,21 +13,23 @@ import slider4 from '../assets/slider/slider (4).jpg';
 import slider5 from '../assets/slider/slider (5).jpg';
 import slider6 from '../assets/slider/slider (6).jpg';
 import slider7 from '../assets/slider/slider (7).jpg';
+import slider8 from '../assets/slider/slider (8).jpg';
 import slider9 from '../assets/slider/slider (9).jpg';
 import slider10 from '../assets/slider/slider (14).jpg';
 
 const HeroSection = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const images = [
-    slider1,
-    slider2,
-    slider3,
+    // slider1,
+    // slider2,
+    // slider3,
     slider4,
     slider5,
     slider6,
     slider7,
-    slider9,
-    slider10,
+    slider8,
+    // slider9,
+    // slider10,
   ];
   const lang = useSelector(selectdLang);
   useEffect(() => {

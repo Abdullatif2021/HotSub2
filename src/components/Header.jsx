@@ -58,15 +58,14 @@ const Header = () => {
       <div className='container-max flex justify-between items-center'>
         <div className='flex items-center gap-2 md:gap-4'>
           <Logo />
-
-          <button
-            onClick={handleLang}
-            className='text-xs md:text-sm flex items-center gap-1 rounded-lg w-11'>
-            <img
-              className='rounded-lg'
-              src={selectedLang === 'FN' ? fr : en}
-              alt='flag'
-            />
+          <button onClick={handleLang} className='arrow-button'>
+            <span
+              className={
+                selectedLang === 'FN' ? 'fn-gradient-text' : 'en-gradient-text'
+              }>
+              {selectedLang === 'FN' ? 'FR' : 'EN'}
+            </span>
+            <span>▼</span> {/* Unicode arrow down icon */}
           </button>
         </div>
 

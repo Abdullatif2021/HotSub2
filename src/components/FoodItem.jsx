@@ -4,8 +4,9 @@ const FoodItem = ({ food }) => {
   return (
     <div className='w-full keen-slider__slide'>
       <img
-        src={CDN_URL + food?.imageId}
-        className='w-full pointer-events-none'
+        src={food.img}
+        style={{ width: food.width }}
+        className='w-full pointer-events-none imagessss'
         alt=''
       />
     </div>

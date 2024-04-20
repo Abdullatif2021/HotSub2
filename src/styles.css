@@ -35,15 +35,60 @@ a {
 .overlay-container {
   position: relative;
 }
+.fn-gradient-text {
+  background: linear-gradient(
+    to right,
+    #0072ff,
+    #00c6ff
+  ); /* Example gradient - adjust colors as needed */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block; /* This is necessary for the gradient to apply correctly */
+}
+.image-container {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  width: 200px; /* Fixed width for all images */
+  /* Fixed height for all images */
+  overflow: hidden; /* Ensures nothing extends beyond the boundaries */
+  /* Aligns images in a line */
+  margin: 10px; /* Adds some space around each image */
+  position: relative; /* Needed for absolute positioning of the image if required */
+}
 
+.imagessss {
+  width: 100%; /* Make the image fill the container */
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the area, can be adjusted to 'contain' if no cropping is desired */
+}
+.en-gradient-text {
+  background: linear-gradient(
+    to right,
+    #ff0000,
+    #00c6ff
+  ); /* Example gradient - adjust colors as needed */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block; /* This is necessary for the gradient to apply correctly */
+}
+.arrow-button {
+  display: flex;
+  align-items: center;
+  gap: 4px; /* Maintain some space between text and the arrow */
+  padding: 4px 8px; /* Add some padding for better touch targets */
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+}
 .overlay {
   position: absolute;
   bottom: 0;
-  background: linear-gradient(
+  /* background: linear-gradient(
     to top,
     rgba(0, 0, 0, 0.7) 10%,
     rgba(0, 0, 0, 0) 90%
-  ); /* Black see-through */
+  ); */
   color: #f1f1f1;
   width: 100%;
   transition: 0.5s ease;

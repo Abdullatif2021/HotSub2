@@ -1,11 +1,18 @@
 import { CDN_URL } from '../utils/constants';
 import '../assets/food.css';
+import slider1 from '../assets/slider/slider (1).jpg';
+import slider2 from '../assets/slider/slider (2).jpg';
+import slider3 from '../assets/slider/slider (3).jpg';
 
+import slider9 from '../assets/slider/slider (9).jpg';
+import slider10 from '../assets/slider/slider (14).jpg';
 const Banner = ({ banner }) => {
   const test = {
-    1: 'https://cdn.grabon.in/gograbon/images/web-images/uploads/1618575517942/food-coupons.jpg',
-    2: 'https://static.toiimg.com/thumb/imgsize-23456,msid-68217715,width-600,resizemode-4/68217715.jpg',
-    3: 'https://www.gopaisa.com/blog/wp-content/uploads/2016/10/Screenshot_5.jpg',
+    1: slider1,
+    2: slider2,
+    3: slider3,
+    4: slider9,
+    5: slider10,
   };
 
   return (
