@@ -65,8 +65,8 @@ a {
 .en-gradient-text {
   background: linear-gradient(
     to right,
-    #ff0000,
-    #00c6ff
+    #000,
+    #000
   ); /* Example gradient - adjust colors as needed */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

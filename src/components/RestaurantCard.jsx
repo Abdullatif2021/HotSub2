@@ -18,7 +18,7 @@ const RestaurantCard = ({ restaurant }) => {
         <img
           src={restaurant.image}
           alt='restaurant'
-          className='relative w-full min-h-[122px] overflow-hidden aspect-video object-cover block rounded-md'
+          className='relative w-full min-h-[122px] md:min-h-[183px] overflow-hidden aspect-video object-contain block rounded-md'
         />
         <div className='overlay w-full rounded-md p-2 px-3 '>
           <p className='text-xl font-bold flex gap-2 flex-wrap'>
@@ -27,14 +27,14 @@ const RestaurantCard = ({ restaurant }) => {
         </div>
       </div>
 
-      <h2 className='text-lg font-semibold mt-2 text-zinc-800'>
+      <h2 className='text-lg font-semibold mt-2' style={{ color: '#df5f61' }}>
         {' '}
         {selectedLang === 'EN' ? restaurant.en_name : restaurant.fr_name}
       </h2>
-      <div className='flex items-center gap-2'>
+      {/* <div className='flex items-center gap-2'>
         <StarIcon className='w-6 h-6 text-orange-400' />{' '}
         <p className='font-semibold text-gray-700 text-sm'>{restaurant.rate}</p>
-      </div>
+      </div> */}
 
       <p className='  text-zinc-600'>
         {selectedLang === 'EN'
@@ -52,7 +52,7 @@ const RestaurantCard = ({ restaurant }) => {
             ))}
       </p>
 
-      <p className='text-zinc-600'>$ {restaurant.price}</p>
+      <p style={{ color: '#df5f61' }}>$ {restaurant.price}</p>
     </>
   );
 };

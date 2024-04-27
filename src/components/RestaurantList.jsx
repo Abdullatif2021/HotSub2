@@ -35,7 +35,6 @@ const RestaurantList = ({ isLoading, restaurants }) => {
         ) : restaurants && restaurants?.length !== 0 ? (
           restaurants.map((restaurant, i) => (
             <Link
-              to={`/restaurants/${restaurant.id}`}
               className='hover:scale-95 transition ease-in-out duration-300 relative z-10 item-background'
               key={i}>
               {restaurant.rate >= 4.2 ? (
