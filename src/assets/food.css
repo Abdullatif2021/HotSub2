@@ -3,6 +3,7 @@
   display: flex;
   overflow-x: hidden;
   scroll-snap-type: x mandatory;
+  justify-content: space-around;
 }
 
 .slide {

@@ -53,6 +53,12 @@ const Header = () => {
   const handleOpenModal = () => dispatch(openLocationModal());
   const latitude = 45.426714694644396;
   const longitude = -75.71570931534453;
+  const handleCall = () => {
+    // Ensure the phoneNumber is in the correct format and URL encoded if necessary
+    const formattedNumber = encodeURIComponent('+1 819-777-7171');
+    // Use window.location to navigate
+    window.location.href = `tel:${formattedNumber}`;
+  };
   return (
     <header className='sticky w-full top-0 bg-white z-20 py-4 border-b shadow-sm border-gray-100'>
       <div className='container-max flex justify-between items-center'>
@@ -100,6 +106,13 @@ const Header = () => {
               <MapPinIcon className='w-4 h-4 text-gray-700' />
               <p className='hidden md:block'>Location</p>
             </a>
+          </li>
+          <li>
+            <Link
+              onClick={handleCall}
+              className='p-2 md:px-4 hover:bg-gray-50 rounded-md flex items-center gap-2'>
+              <PhoneIcon className='w-4 h-4 text-gray-700' /> <p>Contact</p>
+            </Link>
           </li>
           {/* <li>
             <Link
@@ -161,6 +174,14 @@ const Header = () => {
                     <p className='hidden md:block'>Location</p>
                   </a>
                 </li>
+                <li>
+                  <Link
+                    onClick={handleCall}
+                    className='p-2 md:px-4 hover:bg-gray-50 rounded-md flex items-center gap-2'>
+                    <PhoneIcon className='w-4 h-4 text-gray-700' />{' '}
+                    <p>Contact</p>
+                  </Link>
+                </li>
                 {/* <li>
                   <Link
                     to='/about'
@@ -213,14 +234,14 @@ const Header = () => {
           <div className='shadow-lg transition-all md:hidden absolute top-full right-0 bg-white h-screen p-4 px-8'>
             <>
               <ul className='text-zinc-700 space-y-4'>
-                <li>
+                {/* <li>
                   <Link
                     to='/search'
                     className='p-2 md:px-4 hover:bg-gray-50 rounded-md flex items-center gap-2'>
                     <MagnifyingGlassIcon className='w-4 h-4 text-gray-700' />{' '}
                     <p>Search</p>
                   </Link>
-                </li>
+                </li> */}
                 <li>
                   <Link
                     to='/'
@@ -229,16 +250,18 @@ const Header = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    to='/about'
+                  <a
+                    href={`https://www.google.com/maps/search/?api=1&query=${latitude},${longitude}`}
+                    target='_blank'
+                    rel='noopener noreferrer'
                     className='p-2 md:px-4 hover:bg-gray-50 rounded-md flex items-center gap-2'>
-                    <BuildingOfficeIcon className='w-4 h-4 text-gray-700' />{' '}
-                    <p>About</p>
-                  </Link>
+                    <MapPinIcon className='w-4 h-4 text-gray-700' />
+                    <p className=' md:block'>Location</p>
+                  </a>
                 </li>
                 <li>
                   <Link
-                    to='/contact'
+                    onClick={handleCall}
                     className='p-2 md:px-4 hover:bg-gray-50 rounded-md flex items-center gap-2'>
                     <PhoneIcon className='w-4 h-4 text-gray-700' />{' '}
                     <p>Contact</p>

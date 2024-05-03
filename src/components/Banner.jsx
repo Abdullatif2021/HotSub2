@@ -10,10 +10,10 @@ import slider10 from '../assets/slider/slider (14).jpg';
 const Banner = ({ banner }) => {
   const test = {
     1: slider4,
-    2: slider2,
-    3: slider3,
-    4: slider9,
-    5: slider10,
+    // 2: slider2,
+    // 3: slider3,
+    // 4: slider9,
+    // 5: slider10,
   };
 
   return (

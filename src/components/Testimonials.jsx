@@ -6,40 +6,42 @@ import { useSelector, useDispatch } from 'react-redux';
 import star from '../assets/reviews/star.png';
 import img_1 from '../assets/clients/img_1.jpg';
 import img_2 from '../assets/clients/img_2.jpg';
-import img_3 from '../assets/clients/img_3.jpg';
-import img_4 from '../assets/clients/img_4.jpg';
+import client_3 from '../assets/clients/client_3.png';
+import client_4 from '../assets/clients/client_4.png';
+import client_5 from '../assets/clients/client_5.png';
+import client_1 from '../assets/clients/client_1.png';
 
 const testimonials = [
   {
-    image: img_1,
-    name: 'Touseeq Ijaz',
-    username: '@touseeqijazweb',
+    image: client_4,
+    name: 'Sharoon Hernandez',
+    username: '@sharoonhernandez',
     comment:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, quaerat quis? Provident temporibus architecto asperiores nobis maiores nisi a. Quae doloribus ipsum aliquam tenetur voluptates incidunt blanditiis sed atque cumque.',
+      'Food was amazing and We love to have Halal options in Gatineau! Amazing customer service from Mohamdani!First time here and he took the time to explain the menu. Such a beautiful soul!10/10 will come back.',
     stars: 4,
   },
   {
-    image: img_2,
-    name: 'J.K Rowling',
-    username: '@jkrowling',
+    image: client_3,
+    name: 'George Tabet',
+    username: '@george_tabet',
     comment:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, quaerat quis? Provident temporibus architecto asperiores nobis maiores nisi a. Quae doloribus ipsum aliquam tenetur voluptates incidunt blanditiis sed atque cumque.',
+      "I heard a lot that a new restaurant in Ottawa was open, and they do a tremendous Syrian sandwich. I tried it, and it's delicious. I recommend it a lot.",
     stars: 5,
   },
   {
-    image: img_3,
-    name: 'J.K Rowling',
-    username: '@jkrowling',
+    image: client_5,
+    name: 'Nicholas Therien',
+    username: '@NicholasTherien',
     comment:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, quaerat quis? Provident temporibus architecto asperiores nobis maiores nisi a. Quae doloribus ipsum aliquam tenetur voluptates incidunt blanditiis sed atque cumque.',
+      'Sub was amazing. One of the best I ever had. Poutine was very good as well. I highly recommend to anyone looking for a quality sub. Will definitely come back here.',
     stars: 5,
   },
   {
-    image: img_4,
-    name: 'J.K Rowling',
-    username: '@jkrowling',
+    image: client_1,
+    name: 'Farid Berghout',
+    username: '@faridber',
     comment:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, quaerat quis? Provident temporibus architecto asperiores nobis maiores nisi a. Quae doloribus ipsum aliquam tenetur voluptates incidunt blanditiis sed atque cumque.',
+      "(Very warm welcome, very pleasant and perfect service, the waiter (Mohammed el-amin) was exceptionally kind and very friendly. They offer a loyalty card. Honestly it's perfect and I highly recommend.",
     stars: 5,
   },
   // Add other testimonials similarly

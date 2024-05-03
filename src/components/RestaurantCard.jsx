@@ -26,7 +26,6 @@ const RestaurantCard = ({ restaurant }) => {
           </p>
         </div>
       </div>
-
       <h2 className='text-lg font-semibold mt-2' style={{ color: '#df5f61' }}>
         {' '}
         {selectedLang === 'EN' ? restaurant.en_name : restaurant.fr_name}
@@ -35,7 +34,6 @@ const RestaurantCard = ({ restaurant }) => {
         <StarIcon className='w-6 h-6 text-orange-400' />{' '}
         <p className='font-semibold text-gray-700 text-sm'>{restaurant.rate}</p>
       </div> */}
-
       <p className='  text-zinc-600'>
         {selectedLang === 'EN'
           ? restaurant?.en_ingredients?.map((c, i) => (
@@ -51,8 +49,11 @@ const RestaurantCard = ({ restaurant }) => {
               </span>
             ))}
       </p>
-
-      <p style={{ color: '#df5f61' }}>$ {restaurant.price}</p>
+      {restaurant?.price ? (
+        <p style={{ color: '#df5f61' }}>$ {restaurant.price}</p>
+      ) : (
+        ''
+      )}
     </>
   );
 };

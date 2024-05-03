@@ -17,7 +17,12 @@ import slider8 from '../assets/slider/slider (8).jpg';
 import slider9 from '../assets/slider/slider (9).jpg';
 import slider10 from '../assets/slider/slider (14).jpg';
 
+import insta from '../assets/contact/insta.png';
+import call from '../assets/contact/call.png';
+import location from '../assets/contact/location.png';
 const HeroSection = () => {
+  const latitude = 45.426714694644396;
+  const longitude = -75.71570931534453;
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const images = [
     // slider1,
@@ -36,7 +41,19 @@ const HeroSection = () => {
     console.log({ lang });
   }, [lang]);
   const [selectedLang, setLanguage] = useState('EN');
-
+  const handleCall = () => {
+    // Ensure the phoneNumber is in the correct format and URL encoded if necessary
+    const formattedNumber = encodeURIComponent('+1 819-777-7171');
+    // Use window.location to navigate
+    window.location.href = `tel:${formattedNumber}`;
+  };
+  const handleLocation = () => {
+    //  TODO : go to this link `https://www.google.com/maps/search/?api=1&query=${latitude},${longitude}` with a _blank ( open new tab )
+    window.location.href = `https://www.google.com/maps/search/?api=1&query=${latitude},${longitude}`;
+  };
+  const handleInsta = () => {
+    //  TODO : go to this link with a _blank ( open new tab )
+  };
   useEffect(() => {
     setLanguage(lang);
   }, [lang]);
@@ -47,8 +64,7 @@ const HeroSection = () => {
 
     return () => clearInterval(timer); // Clear interval on component unmount
   }, []);
-  const latitude = 45.426714694644396;
-  const longitude = -75.71570931534453;
+
   return (
     <div className='section hero container-max flex flex-col md:flex-row gap-4'>
       <div className='typography flex-1'>
@@ -60,14 +76,26 @@ const HeroSection = () => {
             ? 'Discover Hot Sub! We are passionate about fresh, tasty subs served just the way you like. Join us for a sub experience that is both delicious and satisfying !'
             : 'Découvrez Hot Sub ! Nous sommes passionnés par les subs frais et savoureux, servis exactement comme vous le souhaitez. Rejoignez-nous pour une expérience de sub délicieuse et satisfaisante !'}
         </p>
-        <a
-          href={`https://www.google.com/maps/search/?api=1&query=${latitude},${longitude}`}
-          target='_blank'
-          rel='noopener noreferrer'
-          className='btn w-full md:w-3/5 lg:w-3/5'>
-          <img width='40' height='40' src={icon} alt='location' />{' '}
-          {selectedLang === 'EN' ? 'explore now' : 'explorer maintenant'}
-        </a>
+        <div className='w-full md:w-3/5 lg:w-3/5 flex items-center justify-between'>
+          <img
+            onClick={handleCall}
+            width='60'
+            height='60'
+            src={call}
+            className='cursor-pointer'
+            alt='call'
+          />{' '}
+          <a
+            href={`https://www.google.com/maps/search/?api=1&query=${latitude},${longitude}`}
+            target='_blank'>
+            <img width='60' height='60' src={location} alt='location' />
+          </a>{' '}
+          <a
+            href={`https://www.instagram.com/hotsub.ca?igsh=YTQwZjQ0NmI0OA==`}
+            target='_blank'>
+            <img width='60' height='60' src={insta} alt='insta' />
+          </a>{' '}
+        </div>
       </div>
       <div className='gallery flex-1'>
         <CustomImage

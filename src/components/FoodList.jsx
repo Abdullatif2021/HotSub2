@@ -25,6 +25,7 @@ import cate15 from '../assets/cates/cate (15).png';
 import cate16 from '../assets/cates/cate (16).png';
 import cate17 from '../assets/cates/cate (17).png';
 import cate18 from '../assets/cates/cate (18).png';
+import cate55 from '../assets/cates/cate (55).png';
 
 const FoodList = ({ foods }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -33,44 +34,50 @@ const FoodList = ({ foods }) => {
   const lang = useSelector(selectdLang);
 
   const food_list = [
-    { img: cate1, width: '100%', flex: '0 0 17.5%' },
-    { img: cate16, width: '100%', flex: '0 0 17.5%' },
-    { img: cate2, width: '100%', flex: '0 0 17.5%' },
-    { img: cate3, width: '100%', flex: '0 0 17.5%' },
-    { img: cate4, width: '100%', flex: '0 0 17.5%' },
-    { img: cate5, width: '100%', flex: '0 0 17.5%' },
-    { img: cate6, width: '100%', flex: '0 0 17.5%' },
-    { img: cate7, width: '100%', flex: '0 0 17.5%' },
-    { img: cate8, width: '100%', flex: '0 0 17.5%' },
-    { img: cate9, width: '66px', flex: '0 0 11.5%' },
-    { img: cate10, width: '66px', flex: '0 0 11.5%' },
-    // { img: cate11, width: '66px', flex: '0 0 17.5%' },
-    { img: cate12, width: '66px', flex: '0 0 11.5%' },
-    // { img: cate13, width: '66px', flex: '0 0 17.5%' },
-    // { img: cate14, width: '66px', flex: '0 0 17.5%' },
-    { img: cate15, width: '66px', flex: '0 0 11.5%' },
-    { img: cate17, width: '106px', flex: '0 0 12.5%' },
-    { img: cate18, width: '106px', flex: '0 0 12.5%' },
+    { img: cate17, width: '100%', flex: '0 0 12.5%' },
+    { img: cate16, width: '100%', flex: '0 0 22.5%' },
+    { img: cate10, width: '100%', flex: '0 0 8.5%' },
+    { img: cate55, width: '100%', flex: '0 0 22.5%' },
+    // { img: cate1, width: '100%', flex: '0 0 17.5%' },
+    // { img: cate16, width: '100%', flex: '0 0 17.5%' },
+    // { img: cate2, width: '100%', flex: '0 0 17.5%' },
+    // { img: cate3, width: '100%', flex: '0 0 17.5%' },
+    // { img: cate4, width: '100%', flex: '0 0 17.5%' },
+    // { img: cate5, width: '100%', flex: '0 0 17.5%' },
+    // { img: cate6, width: '100%', flex: '0 0 17.5%' },
+    // { img: cate7, width: '100%', flex: '0 0 17.5%' },
+    // { img: cate8, width: '100%', flex: '0 0 17.5%' },
+    // { img: cate9, width: '66px', flex: '0 0 11.5%' },
+    // { img: cate10, width: '66px', flex: '0 0 11.5%' },
+    // // { img: cate11, width: '66px', flex: '0 0 17.5%' },
+    // { img: cate12, width: '66px', flex: '0 0 11.5%' },
+    // // { img: cate13, width: '66px', flex: '0 0 17.5%' },
+    // // { img: cate14, width: '66px', flex: '0 0 17.5%' },
+    // { img: cate15, width: '66px', flex: '0 0 11.5%' },
+    // { img: cate17, width: '106px', flex: '0 0 12.5%' },
+    // { img: cate18, width: '106px', flex: '0 0 12.5%' },
   ];
   const [FoodList, setFoodList] = useState(food_list);
   const mobile_food_list = [
-    { img: cate1, width: '100%', flex: '0 0 30.5%' },
+    { img: cate17, width: '106px', flex: '0 0 18.5%' },
     { img: cate16, width: '100%', flex: '0 0 30.5%' },
-    { img: cate2, width: '100%', flex: '0 0 30.5%' },
-    { img: cate3, width: '100%', flex: '0 0 30.5%' },
-    { img: cate4, width: '100%', flex: '0 0 30.5%' },
-    { img: cate5, width: '100%', flex: '0 0 30.5%' },
-    { img: cate6, width: '100%', flex: '0 0 30.5%' },
-    { img: cate7, width: '100%', flex: '0 0 30.5%' },
+    { img: cate10, width: '66px', flex: '0 0 13.5%' },
+    { img: cate55, width: '100%', flex: '0 0 30.5%' },
+
+    // { img: cate1, width: '100%', flex: '0 0 30.5%' },
+    // { img: cate2, width: '100%', flex: '0 0 30.5%' },
+    // { img: cate3, width: '100%', flex: '0 0 30.5%' },
+    // { img: cate4, width: '100%', flex: '0 0 30.5%' },
+    // { img: cate5, width: '100%', flex: '0 0 30.5%' },
+    // { img: cate6, width: '100%', flex: '0 0 30.5%' },
+    // { img: cate7, width: '100%', flex: '0 0 30.5%' },
     { img: cate8, width: '100%', flex: '0 0 30.5%' },
     { img: cate9, width: '66px', flex: '0 0 13.5%' },
-    { img: cate10, width: '66px', flex: '0 0 13.5%' },
-    // { img: cate13, width: '66px', flex: '0 0 17.5%' },
-    { img: cate12, width: '66px', flex: '0 0 13.5%' },
-    // { img: cate13, width: '66px', flex: '0 0 17.5%' },
-    // { img: cate14, width: '66px', flex: '0 0 17.5%' },
-    { img: cate15, width: '66px', flex: '0 0 13.5%' },
-    { img: cate17, width: '106px', flex: '0 0 18.5%' },
+    // // { img: cate13, width: '66px', flex: '0 0 17.5%' },
+    // { img: cate12, width: '66px', flex: '0 0 13.5%' },
+    // // { img: cate13, width: '66px', flex: '0 0 17.5%' },
+    // // { img: cate14, width: '66px', flex: '0 0 17.5%' },
+    // { img: cate15, width: '66px', flex: '0 0 13.5%' },
     { img: cate18, width: '106px', flex: '0 0 18.5%' },
   ];
   useEffect(() => {
@@ -133,10 +140,11 @@ const FoodList = ({ foods }) => {
         style={{ display: 'flex', overflowX: 'auto' }}>
         {FoodList.map((food, index) => (
           <div
-            className='image-container'
+            className='image-container flex-col'
             key={index}
             style={{ flex: food.flex }}>
             <FoodItem food={food} />
+            {/* <h1 className='my-4 mt-8 font-bold text-2xl text-zinc-700'>Subs</h1> */}
           </div>
         ))}
       </div>
