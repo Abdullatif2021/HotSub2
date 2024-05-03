@@ -32,7 +32,7 @@ const FoodList = ({ foods }) => {
   const [visibleSlides, setVisibleSlides] = useState(8); // Default to large screens
   const [selectedLang, setLanguage] = useState('EN');
   const lang = useSelector(selectdLang);
-
+  // test
   const food_list = [
     { img: cate17, width: '100%', flex: '0 0 12.5%' },
     { img: cate16, width: '100%', flex: '0 0 22.5%' },
