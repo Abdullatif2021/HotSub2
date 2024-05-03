@@ -7,6 +7,7 @@ import FoodList from './FoodList';
 import RestaurantList from './RestaurantList';
 import Banner from './Banner';
 import HeroSection from './HeroSection';
+import Testimonials from './Testimonials';
 import icon from '../assets/images/icon.png';
 import icon1 from '../assets/images/77.png';
 import call from '../assets/images/call.png';
@@ -83,6 +84,7 @@ const Body = () => {
       {/* restaurant list */}
 
       <RestaurantList isLoading={isLoading} restaurants={meals} />
+      <Testimonials />
       <HeroSection />
       <div className='fixed bottom-12 right-12 flex flex-col items-center z-50'>
         {/* Conditional rendering for the menu based on hover state */}

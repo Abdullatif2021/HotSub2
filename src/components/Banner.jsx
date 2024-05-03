@@ -3,12 +3,13 @@ import '../assets/food.css';
 import slider1 from '../assets/slider/slider (1).jpg';
 import slider2 from '../assets/slider/slider (2).jpg';
 import slider3 from '../assets/slider/slider (3).jpg';
+import slider4 from '../assets/slider/slider (0).png';
 
 import slider9 from '../assets/slider/slider (9).jpg';
 import slider10 from '../assets/slider/slider (14).jpg';
 const Banner = ({ banner }) => {
   const test = {
-    1: slider1,
+    1: slider4,
     2: slider2,
     3: slider3,
     4: slider9,

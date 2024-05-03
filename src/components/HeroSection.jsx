@@ -53,12 +53,12 @@ const HeroSection = () => {
     <div className='section hero container-max flex flex-col md:flex-row gap-4'>
       <div className='typography flex-1'>
         <h1 className='title'>
-          {selectedLang === 'EN' ? 'Who We Are?' : 'Qui nous sommes?'}
+          {selectedLang === 'EN' ? 'About Hotsub' : 'À propos de Hotsub'}
         </h1>
         <p className='info'>
           {selectedLang === 'EN'
-            ? 'Hot Sub is a place where you can please your soul and tummy with delicious food recipes of all cuisines. Our service is absolutely free. So start exploring now.'
-            : 'Hot Sub est un endroit où vous pouvez faire plaisir à votre âme et à votre ventre avec de délicieuses recettes culinaires de toutes les cuisines. Notre service est absolument gratuit. Alors commencez à explorer maintenant.'}
+            ? 'Discover Hot Sub! We are passionate about fresh, tasty subs served just the way you like. Join us for a sub experience that is both delicious and satisfying !'
+            : 'Découvrez Hot Sub ! Nous sommes passionnés par les subs frais et savoureux, servis exactement comme vous le souhaitez. Rejoignez-nous pour une expérience de sub délicieuse et satisfaisante !'}
         </p>
         <a
           href={`https://www.google.com/maps/search/?api=1&query=${latitude},${longitude}`}

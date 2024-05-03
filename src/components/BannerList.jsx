@@ -39,7 +39,7 @@ const BannerList = () => {
         slides: { perView: 2, spacing: 10 },
       },
       '(min-width: 768px)': {
-        slides: { perView: 3, spacing: 10 },
+        slides: { perView: 1, spacing: 0 },
       },
     },
     created(slider) {
@@ -108,7 +108,7 @@ const BannerList = () => {
           ))}
         </div>
       ) : (
-        <div ref={sliderRef} className='keen-slider'>
+        <div ref={sliderRef} className='keen-slider md:h-[270px]'>
           {test.map((banner) => (
             <Banner banner={banner} key={banner.id} />
           ))}
