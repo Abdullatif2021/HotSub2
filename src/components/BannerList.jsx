@@ -108,7 +108,7 @@ const BannerList = () => {
           ))}
         </div>
       ) : (
-        <div ref={sliderRef} className='keen-slider h-[145px] md:h-[270px]'>
+        <div ref={sliderRef} className='keen-slider h-[180px] md:h-[270px]'>
           {test.map((banner) => (
             <Banner banner={banner} key={banner.id} />
           ))}

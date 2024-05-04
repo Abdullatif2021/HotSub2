@@ -27,6 +27,8 @@ import meal33 from '../assets/meals/meal (33).jpg';
 import meal66 from '../assets/meals/meal (66).jpg';
 import meal77 from '../assets/meals/meal (77).jpg';
 import meal99 from '../assets/meals/meal (99).jpg';
+import slider1 from '../assets/slider/slider (1).jpg';
+
 // milkshakes
 import milk1 from '../assets/meals/milk (1).png';
 import milk2 from '../assets/meals/milk (2).png';
@@ -747,7 +749,7 @@ export const meals = [
   // Dessert ------------------------------------
   {
     id: 2,
-    image: meal,
+    image: slider1,
     en_name: 'Churros',
     fr_name: 'Churros',
     en_ingredients: [
