@@ -17,8 +17,9 @@ import meal17 from '../assets/meals/meal (17).jpg';
 
 import meal21 from '../assets/meals/meal (21).jpg';
 import meal22 from '../assets/meals/meal (22).jpg';
-import meal25 from '../assets/meals/meal (25).jpg';
-import meal27 from '../assets/meals/meal (27).jpg';
+import meal25 from '../assets/meals/meal (25).png';
+import meal26 from '../assets/meals/meal (26).png';
+import meal27 from '../assets/meals/meal (27).png';
 import meal30 from '../assets/meals/meal (30).jpg';
 import meal31 from '../assets/meals/meal (31).jpg';
 import meal32 from '../assets/meals/meal (32).jpg';
@@ -26,12 +27,31 @@ import meal33 from '../assets/meals/meal (33).jpg';
 import meal66 from '../assets/meals/meal (66).jpg';
 import meal77 from '../assets/meals/meal (77).jpg';
 import meal99 from '../assets/meals/meal (99).jpg';
+// milkshakes
+import milk1 from '../assets/meals/milk (1).png';
+import milk2 from '../assets/meals/milk (2).png';
+import milk3 from '../assets/meals/milk (3).png';
+import milk4 from '../assets/meals/milk (4).png';
 // drinks
 import drink1 from '../assets/meals/drink (1).png';
 import drink2 from '../assets/meals/drink (2).png';
 import drink3 from '../assets/meals/drink (3).png';
+import drink4 from '../assets/meals/drink (4).png';
+import drink5 from '../assets/meals/drink (5).png';
+import drink6 from '../assets/meals/drink (6).png';
+import drink7 from '../assets/meals/drink (7).png';
+import drink8 from '../assets/meals/drink (8).png';
+import drink9 from '../assets/meals/drink (9).png';
+// souces
+import souce1 from '../assets/meals/souce (1).png';
+import souce2 from '../assets/meals/souce (2).png';
+import souce3 from '../assets/meals/souce (3).png';
+import souce4 from '../assets/meals/souce (4).png';
+import souce5 from '../assets/meals/souce (5).png';
+import souce6 from '../assets/meals/souce (6).png';
 
 export const meals = [
+  // en_category: 'Grilled Chicken Subs'
   {
     id: 33,
     image: meal33,
@@ -58,6 +78,8 @@ export const meals = [
     fr_extra: '',
     price: 12.99,
     rate: 4.0,
+    en_category: 'Grilled Chicken Subs',
+    fr_category: 'Sous-marins poulet grillé',
   },
   {
     id: 31,
@@ -85,6 +107,8 @@ export const meals = [
     fr_extra: '',
     price: 12.99,
     rate: 4.0,
+    en_category: 'Grilled Chicken Subs',
+    fr_category: 'Sous-marins poulet grillé',
   },
   {
     id: 2,
@@ -101,6 +125,8 @@ export const meals = [
     fr_extra: '',
     price: 12.99,
     rate: 4.0,
+    en_category: 'Grilled Chicken Subs',
+    fr_category: 'Sous-marins poulet grillé',
   },
   {
     id: 2,
@@ -117,7 +143,12 @@ export const meals = [
     fr_extra: '',
     price: 12.99,
     rate: 4.0,
+    en_category: 'Grilled Chicken Subs',
+    fr_category: 'Sous-marins poulet grillé',
   },
+  // en_category: 'Grilled Chicken Subs'
+
+  // en_category: 'Fried Chicken Subs'
   {
     id: 2,
     image: meal14,
@@ -141,6 +172,8 @@ export const meals = [
     fr_extra: '',
     price: 12.99,
     rate: 4.0,
+    en_category: 'Fried Chicken Subs',
+    fr_category: 'Sous-marins poulet frit',
   },
 
   {
@@ -167,6 +200,8 @@ export const meals = [
     fr_extra: '',
     price: 13.99,
     rate: 4.0,
+    en_category: 'Fried Chicken Subs',
+    fr_category: 'Sous-marins poulet frit',
   },
   {
     id: 2,
@@ -181,7 +216,11 @@ export const meals = [
     fr_extra: '',
     price: 12.99,
     rate: 4.0,
+    en_category: 'Fried Chicken Subs',
+    fr_category: 'Sous-marins poulet frit',
   },
+  // en_category: 'Fried Chicken Subs'
+  // en_category: 'Beef Subs'
   {
     id: 2,
     image: meal15,
@@ -194,6 +233,7 @@ export const meals = [
       'mushrooms',
       ' pepper corn mayo sauce',
     ],
+
     fr_ingredients: [
       'Tranches de bœuf tendre',
       'mozzarella',
@@ -206,12 +246,15 @@ export const meals = [
     fr_extra: '',
     price: 13.99,
     rate: 4.0,
+    en_category: 'Beef Subs',
+    fr_category: 'Sous-marins bœuf',
   },
   {
     id: 2,
     image: meal21,
     en_name: 'Ultimate Gravy Delight',
     fr_name: 'Délice De Sauce Ultime',
+
     en_ingredients: [
       'Marinated juicy beef strips',
       'grilled onion',
@@ -229,7 +272,16 @@ export const meals = [
     fr_extra: 'ewewewwewe',
     price: 13.99,
     rate: 4.0,
+    en_category: 'Beef Subs',
+    fr_category: 'Sous-marins bœuf',
   },
+  // en_category: 'Beef Subs'
+
+  //
+  //
+
+  // en_category: 'Bowls with fries'
+
   {
     id: 2,
     image: meal4,
@@ -245,6 +297,8 @@ export const meals = [
     fr_extra: '',
     price: 14.99,
     rate: 3.9,
+    en_category: 'Bowls with fries',
+    fr_category: 'Bols avec des frites',
   },
   {
     id: 2,
@@ -272,6 +326,8 @@ export const meals = [
     fr_extra: '',
     price: 14.99,
     rate: 4.0,
+    en_category: 'Bowls with fries',
+    fr_category: 'Bols avec des frites',
   },
   {
     id: 2,
@@ -295,6 +351,8 @@ export const meals = [
     fr_extra: '',
     price: 14.99,
     rate: 4.0,
+    en_category: 'Bowls with fries',
+    fr_category: 'Bols avec des frites',
   },
   {
     id: 2,
@@ -319,6 +377,8 @@ export const meals = [
     fr_extra: '',
     price: 15.99,
     rate: 4.0,
+    en_category: 'Bowls with fries',
+    fr_category: 'Bols avec des frites',
   },
   {
     id: 2,
@@ -344,6 +404,8 @@ export const meals = [
     fr_extra: '',
     price: 16.99,
     rate: 4.0,
+    en_category: 'Bowls with fries',
+    fr_category: 'Bols avec des frites',
   },
   {
     id: 2,
@@ -361,10 +423,12 @@ export const meals = [
     fr_extra: '',
     price: 15.99,
     rate: 4.0,
+    en_category: 'Bowls with fries',
+    fr_category: 'Bols avec des frites',
   },
   {
     id: 2,
-    image: meal,
+    image: meal4,
     en_name: 'Philadelphia Bowl',
     fr_name: 'Bol Philadelphia',
     en_ingredients: [
@@ -377,6 +441,8 @@ export const meals = [
     fr_extra: '',
     price: 16.99,
     rate: 3.2,
+    en_category: 'Bowls with fries',
+    fr_category: 'Bols avec des frites',
   },
   {
     id: 2,
@@ -393,6 +459,8 @@ export const meals = [
     fr_extra: '',
     price: 16.99,
     rate: 4.0,
+    en_category: 'Bowls with fries',
+    fr_category: 'Bols avec des frites',
   },
   {
     id: 2,
@@ -409,7 +477,12 @@ export const meals = [
     fr_extra: '',
     price: 11.99,
     rate: 4.0,
+    en_category: 'Bowls with fries',
+    fr_category: 'Bols avec des frites',
   },
+  // en_category: 'Bowls with fries'
+
+  // en_category: 'Falafel and Fries'
   {
     id: 2,
     image: meal66,
@@ -425,6 +498,8 @@ export const meals = [
     fr_extra: '',
     price: 8.99,
     rate: 4.0,
+    en_category: 'Falafel and Fries',
+    fr_category: 'Falafels et frites',
   },
   {
     id: 2,
@@ -437,73 +512,316 @@ export const meals = [
     fr_extra: '',
     price: 7.99,
     rate: 4.0,
+    en_category: 'Falafel and Fries',
+    fr_category: 'Falafels et frites',
+  },
+  {
+    id: 2,
+    image: meal,
+    en_name: 'Falafel Bites',
+    fr_name: 'Bouchées De Falafel',
+    en_ingredients: [''],
+    fr_ingredients: [''],
+    en_extra: '',
+    fr_extra: '',
+    price: 0.75,
+    rate: 4.0,
+    en_category: 'Falafel and Fries',
+    fr_category: 'Falafels et frites',
+  },
+  // Appetizers
+  {
+    id: 2,
+    image: meal,
+    en_name: 'Chicken Nuggets - 4 Pieces With Fries',
+    fr_name: 'Croquettes De Poulet - 4 Morceaux Avec Frites',
+    en_ingredients: ['Served with one sauce.'],
+    fr_ingredients: ['Servi avec une sauce.'],
+    en_extra: '',
+    fr_extra: '',
+    price: 5.99,
+    rate: 4.0,
+    en_category: 'Appetizers',
+    fr_category: 'Entrées',
+  },
+  {
+    id: 2,
+    image: meal,
+    en_name: 'Bombastic Box',
+    fr_name: 'Boîte À Bombes',
+    en_ingredients: [
+      '2 pieces of chicken strips, 3 pieces of wings, 4 chicken nuggets with fries. Served with one sauce.',
+    ],
+    fr_ingredients: [
+      '2 languettes, 3 ailes de poulet, 4 croquettes avec frites. Servi avec une sauce.',
+    ],
+    en_extra: '',
+    fr_extra: '',
+    price: 13.99,
+    rate: 4.0,
+    en_category: 'Appetizers',
+    fr_category: 'Entrées',
+  },
+  {
+    id: 2,
+    image: meal,
+    en_name: 'Chicken Nuggets - 6 Pieces With Fries',
+    fr_name: 'Croquettes De Poulet - 6 Morceaux Avec Frites',
+    en_ingredients: ['Served with two sauces.'],
+    fr_ingredients: ['Servi avec deux sauces.'],
+    en_extra: '',
+    fr_extra: '',
+    price: 6.99,
+    rate: 4.0,
+    en_category: 'Appetizers',
+    fr_category: 'Entrées',
+  },
+  {
+    id: 2,
+    image: meal,
+    en_name: 'Chicken Classic Caesar Salad',
+    fr_name: 'Poulet Salade César',
+    en_ingredients: [
+      'Romaine lettuce, grilled chicken breast fillet, croutons, et parmesan cheese. Served with Caesar dressing.',
+    ],
+    fr_ingredients: [
+      'Laitue romaine, poitrine de poulet grillée, croûtons, parmesan, servie avec vinaigrette César.',
+    ],
+    en_extra: '',
+    fr_extra: '',
+    price: 11.99,
+    rate: 4.0,
+    en_category: 'Appetizers',
+    fr_category: 'Entrées',
   },
 
-  // milkshake ------------------------------------
+  // Appetizers
+
+  // Sauce / Dips
+
+  {
+    id: 2,
+    image: souce2,
+    en_name: 'Mayo',
+    fr_name: 'Mayo',
+    en_ingredients: [''],
+    fr_ingredients: [''],
+    en_extra: '',
+    fr_extra: '',
+    price: 0.5,
+    rate: 4.0,
+    en_category: 'Dips',
+    fr_category: 'Sauce',
+  },
+  {
+    id: 2,
+    image: souce3,
+    en_name: 'Sriracha',
+    fr_name: 'Sriracha',
+    en_ingredients: [''],
+    fr_ingredients: [''],
+    en_extra: '',
+    fr_extra: '',
+    price: 0.5,
+    rate: 4.0,
+    en_category: 'Dips',
+    fr_category: 'Sauce',
+  },
+  {
+    id: 2,
+    image: souce5,
+    en_name: 'BBQ',
+    fr_name: 'BBQ',
+    en_ingredients: [''],
+    fr_ingredients: [''],
+    en_extra: '',
+    fr_extra: '',
+    price: 0.75,
+    rate: 4.0,
+    en_category: 'Dips',
+    fr_category: 'Sauce',
+  },
+  {
+    id: 2,
+    image: souce1,
+    en_name: 'Honey Mustard',
+    fr_name: 'Moutarde Au Miel',
+    en_ingredients: [''],
+    fr_ingredients: [''],
+    en_extra: '',
+    fr_extra: '',
+    price: 0.75,
+    rate: 4.0,
+    en_category: 'Dips',
+    fr_category: 'Sauce',
+  },
+  {
+    id: 2,
+    image: souce6,
+    en_name: 'Gravy',
+    fr_name: 'Sauce',
+    en_ingredients: [''],
+    fr_ingredients: [''],
+    en_extra: '',
+    fr_extra: '',
+    price: 0.75,
+    rate: 4.0,
+    en_category: 'Dips',
+    fr_category: 'Sauce',
+  },
+  {
+    id: 2,
+    image: souce4,
+    en_name: 'Tahini',
+    fr_name: 'Tahini',
+    en_ingredients: [''],
+    fr_ingredients: [''],
+    en_extra: '',
+    fr_extra: '',
+    price: 0.75,
+    rate: 4.0,
+    en_category: 'Dips',
+    fr_category: 'Sauce',
+  },
+
+  // Sauce / Dips
+
+  // À côté / Sides ------------------------------------
+  {
+    id: 2,
+    image: meal,
+    en_name: 'Fries',
+    fr_name: 'Frites',
+    en_ingredients: [''],
+    fr_ingredients: [''],
+    en_extra: '',
+    fr_extra: '',
+    price: 4.99,
+    rate: 4.0,
+    en_category: 'Sides',
+    fr_category: 'À côté',
+  },
+  {
+    id: 2,
+    image: meal,
+    en_name: 'Sweet Potato Fries',
+    fr_name: 'Frites De Patates Douces',
+    en_ingredients: [''],
+    fr_ingredients: [''],
+    en_extra: '',
+    fr_extra: '',
+    price: 5.99,
+    rate: 4.0,
+    en_category: 'Sides',
+    fr_category: 'À côté',
+  },
+  {
+    id: 2,
+    image: meal,
+    en_name: 'Onion Rings',
+    fr_name: "Rondelles D'oignon",
+    en_ingredients: [''],
+    fr_ingredients: [''],
+    en_extra: '',
+    fr_extra: '',
+    price: 5.99,
+    rate: 4.0,
+    en_category: 'Sides',
+    fr_category: 'À côté',
+  },
+  {
+    id: 2,
+    image: meal,
+    en_name: 'Poutine',
+    fr_name: 'Poutine',
+    en_ingredients: [''],
+    fr_ingredients: [''],
+    en_extra: '',
+    fr_extra: '',
+    price: 6.99,
+    rate: 4.0,
+    en_category: 'Sides',
+    fr_category: 'À côté',
+  },
+  // À côté / Sides ------------------------------------
+  // Dessert ------------------------------------
+  {
+    id: 2,
+    image: meal,
+    en_name: 'Churros',
+    fr_name: 'Churros',
+    en_ingredients: [
+      '6 pieces gourmet churros topped with cinnamon sugar served with a side of dipping sauce of you choice.',
+    ],
+    fr_ingredients: [
+      '6 morceaux de churros gourmet garnis de sucre à la cannelle, servis avec une trempette au choix.',
+    ],
+    en_extra: '',
+    fr_extra: '',
+    price: 8.99,
+    rate: 4.0,
+    en_category: 'Dessert',
+    fr_category: 'Dessert',
+  },
   {
     id: 2,
     image: meal25,
-    en_name: 'Milkshakes',
-    fr_name: 'Lait Frappé',
+    en_name: 'Vanilla',
+    fr_name: 'Vanille',
     en_ingredients: [' With whipped cream'],
     fr_ingredients: ['Avec de la crème fouettée. '],
     en_extra: '',
     fr_extra: '',
     price: 7.99,
     rate: 4.0,
+    en_category: 'Dessert',
+    fr_category: 'Dessert',
   },
-
+  {
+    id: 2,
+    image: meal26,
+    en_name: 'Chocolate',
+    fr_name: 'Chocolat',
+    en_ingredients: [' With whipped cream'],
+    fr_ingredients: ['Avec de la crème fouettée. '],
+    en_extra: '',
+    fr_extra: '',
+    price: 7.99,
+    rate: 4.0,
+    en_category: 'Dessert',
+    fr_category: 'Dessert',
+  },
+  {
+    id: 2,
+    image: meal26,
+    en_name: 'Caramel',
+    fr_name: 'Caramel',
+    en_ingredients: [' With whipped cream'],
+    fr_ingredients: ['Avec de la crème fouettée. '],
+    en_extra: '',
+    fr_extra: '',
+    price: 7.99,
+    rate: 4.0,
+    en_category: 'Dessert',
+    fr_category: 'Dessert',
+  },
   {
     id: 2,
     image: meal27,
-    en_name: '',
-    fr_name: '',
-    en_ingredients: [''],
-    fr_ingredients: [''],
+    en_name: 'Strawberry',
+    fr_name: 'Fraise',
+    en_ingredients: [' With whipped cream'],
+    fr_ingredients: ['Avec de la crème fouettée. '],
     en_extra: '',
     fr_extra: '',
-    price: '',
+    price: 7.99,
     rate: 4.0,
+    en_category: 'Dessert',
+    fr_category: 'Dessert',
   },
-  {
-    id: 2,
-    image: meal25,
-    en_name: '',
-    fr_name: '',
-    en_ingredients: [''],
-    fr_ingredients: [''],
-    en_extra: '',
-    fr_extra: '',
-    price: '',
-    rate: 4.0,
-  },
-  // milkshake ------------------------------------
-  // drinks -------------------------------------------
 
-  {
-    id: 2,
-    image: drink1,
-    en_name: '7Up',
-    fr_name: '7Up',
-    en_ingredients: [''],
-    fr_ingredients: [''],
-    en_extra: '',
-    fr_extra: '',
-    price: 2.5,
-    rate: 4.0,
-  },
-  {
-    id: 2,
-    image: drink2,
-    en_name: 'CocaCola',
-    fr_name: 'CocaCola',
-    en_ingredients: [''],
-    fr_ingredients: [''],
-    en_extra: '',
-    fr_extra: '',
-    price: 2.5,
-    rate: 4.0,
-  },
+  // Dessert ------------------------------------
+  // Boissons / Drinks ------------------------------------
   {
     id: 2,
     image: drink3,
@@ -515,7 +833,135 @@ export const meals = [
     fr_extra: '',
     price: 2.5,
     rate: 4.0,
+
+    en_category: 'Drinks',
+    fr_category: 'Boissons',
   },
+  {
+    id: 2,
+    image: drink8,
+    en_name: 'Diet Pepsi',
+    fr_name: 'Pepsi Diète',
+    en_ingredients: [''],
+    fr_ingredients: [''],
+    en_extra: '',
+    fr_extra: '',
+    price: 2.5,
+    rate: 4.0,
+
+    en_category: 'Drinks',
+    fr_category: 'Boissons',
+  },
+  {
+    id: 2,
+    image: drink1,
+    en_name: '7 Up',
+    fr_name: '7 Up',
+    en_ingredients: [''],
+    fr_ingredients: [''],
+    en_extra: '',
+    fr_extra: '',
+    price: 2.5,
+    rate: 4.0,
+
+    en_category: 'Drinks',
+    fr_category: 'Boissons',
+  },
+  {
+    id: 2,
+    image: drink5,
+    en_name: 'Ginger Ale',
+    fr_name: 'Soda Au Gingembre',
+    en_ingredients: [''],
+    fr_ingredients: [''],
+    en_extra: '',
+    fr_extra: '',
+    price: 2.5,
+    rate: 4.0,
+
+    en_category: 'Drinks',
+    fr_category: 'Boissons',
+  },
+  {
+    id: 2,
+    image: drink6,
+    en_name: 'Crush',
+    fr_name: 'Crush',
+    en_ingredients: [''],
+    fr_ingredients: [''],
+    en_extra: '',
+    fr_extra: '',
+    price: 2.5,
+    rate: 4.0,
+
+    en_category: 'Drinks',
+    fr_category: 'Boissons',
+  },
+  {
+    id: 2,
+    image: drink9,
+    en_name: 'Juice',
+    fr_name: 'Jus',
+    en_ingredients: [''],
+    fr_ingredients: [''],
+    en_extra: '',
+    fr_extra: '',
+    price: 2.5,
+    rate: 4.0,
+
+    en_category: 'Drinks',
+    fr_category: 'Boissons',
+  },
+  {
+    id: 2,
+    image: drink4,
+    en_name: 'Water',
+    fr_name: 'Eau',
+    en_ingredients: [''],
+    fr_ingredients: [''],
+    en_extra: '',
+    fr_extra: '',
+    price: 2.5,
+    rate: 4.0,
+
+    en_category: 'Drinks',
+    fr_category: 'Boissons',
+  },
+  {
+    id: 2,
+    image: drink7,
+    en_name: 'Sparkling Water',
+    fr_name: 'Eau Pétillante',
+    en_ingredients: [''],
+    fr_ingredients: [''],
+    en_extra: '',
+    fr_extra: '',
+    price: 2.5,
+    rate: 4.0,
+
+    en_category: 'Drinks',
+    fr_category: 'Boissons',
+  },
+
+  // Boissons / Drinks ------------------------------------
+
+  // milkshake ------------------------------------
+
+  // milkshake ------------------------------------
+  // drinks -------------------------------------------
+
+  // {
+  //   id: 2,
+  //   image: drink2,
+  //   en_name: 'CocaCola',
+  //   fr_name: 'CocaCola',
+  //   en_ingredients: [''],
+  //   fr_ingredients: [''],
+  //   en_extra: '',
+  //   fr_extra: '',
+  //   price: 2.5,
+  //   rate: 4.0,
+  // },
 
   // drinks -------------------------------------------
 ];

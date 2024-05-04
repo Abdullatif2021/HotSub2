@@ -89,7 +89,7 @@ function Testimonials() {
   }, [lang]);
   return (
     <section id='testimonials'>
-      <div className='testimonial-heading'>
+      <div className='testimonial-heading w-full xl:w-[73%]'>
         <h1 className='my-4 mt-8 font-bold text-2xl text-zinc-700'>
           {selectedLang === 'EN' ? 'Customer Reviews' : 'Avis des clients'}
         </h1>

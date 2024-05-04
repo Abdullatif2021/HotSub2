@@ -1,53 +1,75 @@
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import RestaurantCard, { withTopRatedLabel } from './RestaurantCard';
 import ShimmerCard from './ShimmerCard';
-import { useEffect, useState } from 'react';
+import { useSelector } from 'react-redux';
 import { selectdLang } from '../features/app/appSlice';
-import { useSelector, useDispatch } from 'react-redux';
+
 const RestaurantList = ({ isLoading, restaurants }) => {
-  console.log('errrrrr', { isLoading, restaurants });
   const RestaurantCardTopRated = withTopRatedLabel(RestaurantCard);
   const lang = useSelector(selectdLang);
-  useEffect(() => {
-    console.log({ lang });
-  }, [lang]);
-  const [selectedLang, setLanguage] = useState('EN');
-  const [is_loading, setIs_loading] = useState(true);
+  const [selectedLang, setSelectedLang] = useState('EN');
+  const [is_loading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    setIs_loading(true);
+    setSelectedLang(lang);
+  }, [lang]);
+
+  useEffect(() => {
+    setIsLoading(true);
     setTimeout(() => {
-      setIs_loading(false);
+      setIsLoading(false);
     }, 1000);
   }, [selectedLang]);
-  useEffect(() => {
-    setLanguage(lang);
-  }, [lang]);
+
+  const getCategoryFromName = (meal) => {
+    // Implement your logic here to determine the category from the meal name
+    // For example, you might split the name by space and take the first word
+    return selectedLang === 'EN' ? meal.en_category : meal.fr_category;
+  };
+
+  // Group meals by category
+  const categories = restaurants.reduce((acc, meal) => {
+    const category = getCategoryFromName(meal);
+    if (!acc[category]) {
+      acc[category] = [];
+    }
+    acc[category].push(meal);
+    return acc;
+  }, {});
+
   return (
     <div className='container-max'>
-      <h1 className='my-4 mt-8 font-bold text-2xl text-zinc-700'>
-        {selectedLang === 'EN' ? 'Our Delicious meals' : 'Nos délicieux repas'}
-      </h1>
-
-      <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-8'>
-        {is_loading ? (
-          Array.from({ length: 16 }).map((_, i) => <ShimmerCard key={i} />)
-        ) : restaurants && restaurants?.length !== 0 ? (
-          restaurants.map((restaurant, i) => (
-            <Link
-              className='hover:scale-95 transition ease-in-out duration-300 relative z-10 item-background'
-              key={i}>
-              {restaurant.rate >= 4.2 ? (
-                <RestaurantCardTopRated restaurant={restaurant} />
-              ) : (
-                <RestaurantCard restaurant={restaurant} />
-              )}
-            </Link>
-          ))
-        ) : (
-          <p>No restaurant found!</p>
-        )}
-      </div>
+      {Object.entries(categories).map(([category, meals]) => (
+        <div key={category}>
+          <h2 className='my-4 mt-8 font-bold text-2xl text-zinc-700'>
+            {selectedLang === 'EN'
+              ? category
+              : category === 'Poulet'
+              ? 'Chicken'
+              : category}{' '}
+            {/* Customize category name if needed */}
+          </h2>
+          <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-8'>
+            {is_loading
+              ? Array.from({ length: 4 }).map((_, i) => <ShimmerCard key={i} />)
+              : meals.map((restaurant, i) => (
+                  <Link
+                    className='hover:scale-95 transition ease-in-out duration-300 relative z-10 item-background'
+                    key={i}>
+                    {restaurant.rate >= 4.2 ? (
+                      <RestaurantCardTopRated restaurant={restaurant} />
+                    ) : (
+                      <RestaurantCard restaurant={restaurant} />
+                    )}
+                  </Link>
+                ))}
+          </div>
+        </div>
+      ))}
+      {Object.keys(categories).length === 0 && !isLoading && (
+        <p>No restaurant found!</p>
+      )}
     </div>
   );
 };

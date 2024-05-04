@@ -38,8 +38,8 @@ a {
 .fn-gradient-text {
   background: linear-gradient(
     to right,
-    #0072ff,
-    #00c6ff
+    #070707,
+    #020202
   ); /* Example gradient - adjust colors as needed */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
