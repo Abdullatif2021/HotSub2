@@ -85,9 +85,7 @@ const HeroSection = () => {
             className='cursor-pointer'
             alt='call'
           />{' '}
-          <a
-            href={`https://www.google.com/maps/search/?api=1&query=${latitude},${longitude}`}
-            target='_blank'>
+          <a href={`https://maps.app.goo.gl/1VBzpRd4zNh39HDK8`} target='_blank'>
             <img width='60' height='60' src={location} alt='location' />
           </a>{' '}
           <a

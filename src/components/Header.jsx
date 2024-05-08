@@ -251,7 +251,7 @@ const Header = () => {
                 </li>
                 <li>
                   <a
-                    href={`https://www.google.com/maps/search/?api=1&query=${latitude},${longitude}`}
+                    href={`https://maps.app.goo.gl/1VBzpRd4zNh39HDK8`}
                     target='_blank'
                     rel='noopener noreferrer'
                     className='p-2 md:px-4 hover:bg-gray-50 rounded-md flex items-center gap-2'>
