@@ -51,9 +51,7 @@ const HeroSection = () => {
     //  TODO : go to this link `https://www.google.com/maps/search/?api=1&query=${latitude},${longitude}` with a _blank ( open new tab )
     window.location.href = `https://www.google.com/maps/search/?api=1&query=${latitude},${longitude}`;
   };
-  const handleInsta = () => {
-    //  TODO : go to this link with a _blank ( open new tab )
-  };
+  const handleInsta = () => {};
   useEffect(() => {
     setLanguage(lang);
   }, [lang]);
